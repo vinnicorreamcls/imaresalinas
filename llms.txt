@@ -1,0 +1,62 @@
+# Imaré Salinas
+
+> Pousada familiar em Salinópolis, Pará, com suítes, Casa Duna e informações para planejar passeios na região.
+> Family guesthouse in Salinópolis, Pará, Brazil, with suites, Casa Duna and tips for planning trips in the region.
+> Posada familiar en Salinópolis, Pará, Brasil, con suites, Casa Duna e información para planificar paseos en la región.
+
+## Site oficial
+
+- https://imaresalinas.com/
+- Canonical host: https://imaresalinas.com
+- Idiomas / Languages / Idiomas: Português do Brasil (pt-BR, padrão), English (/en/), Español (/es/)
+
+## Páginas principais (Português)
+
+- [Início e acomodações](https://imaresalinas.com/)
+- [Suíte Aconchego](https://imaresalinas.com/suiteaconchego)
+- [Suíte Brisa](https://imaresalinas.com/suitebrisa)
+- [Suíte Cantinho](https://imaresalinas.com/suitecantinho)
+- [Suíte Estrela](https://imaresalinas.com/suiteestrela)
+- [Suíte Farol](https://imaresalinas.com/suitefarol)
+- [Casa Duna](https://imaresalinas.com/casaduna)
+- [Pontos turísticos](https://imaresalinas.com/pontosturisticos)
+- [Aventura em Salinópolis](https://imaresalinas.com/aventura-salinopolis.html)
+- [Cultura e eventos](https://imaresalinas.com/cultura-salinopolis.html)
+- [Gastronomia paraense](https://imaresalinas.com/gastronomia)
+
+## Main pages (English)
+
+- [Home and rooms](https://imaresalinas.com/en/)
+- [Aconchego Suite](https://imaresalinas.com/en/suiteaconchego)
+- [Brisa Suite](https://imaresalinas.com/en/suitebrisa)
+- [Cantinho Suite](https://imaresalinas.com/en/suitecantinho)
+- [Estrela Suite](https://imaresalinas.com/en/suiteestrela)
+- [Farol Suite](https://imaresalinas.com/en/suitefarol)
+- [Casa Duna](https://imaresalinas.com/en/casaduna)
+- [Tourist attractions](https://imaresalinas.com/en/pontosturisticos)
+- [Adventure in Salinópolis](https://imaresalinas.com/en/aventura-salinopolis.html)
+- [Culture and events](https://imaresalinas.com/en/cultura-salinopolis.html)
+- [Food of Pará](https://imaresalinas.com/en/gastronomia)
+
+## Páginas principales (Español)
+
+- [Inicio y alojamientos](https://imaresalinas.com/es/)
+- [Suite Aconchego](https://imaresalinas.com/es/suiteaconchego)
+- [Suite Brisa](https://imaresalinas.com/es/suitebrisa)
+- [Suite Cantinho](https://imaresalinas.com/es/suitecantinho)
+- [Suite Estrela](https://imaresalinas.com/es/suiteestrela)
+- [Suite Farol](https://imaresalinas.com/es/suitefarol)
+- [Casa Duna](https://imaresalinas.com/es/casaduna)
+- [Puntos turísticos](https://imaresalinas.com/es/pontosturisticos)
+- [Aventura en Salinópolis](https://imaresalinas.com/es/aventura-salinopolis.html)
+- [Cultura y eventos](https://imaresalinas.com/es/cultura-salinopolis.html)
+- [Gastronomía paraense](https://imaresalinas.com/es/gastronomia)
+
+## Contato e localização / Contact and location / Contacto y ubicación
+
+- Endereço / Address / Dirección: R. F, 770, Salinópolis - PA, 68721-000
+- WhatsApp: +55 27 99533-8163
+
+## Sitemap
+
+- https://imaresalinas.com/sitemap.xml
