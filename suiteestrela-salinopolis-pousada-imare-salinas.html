@@ -228,7 +228,7 @@
         mainVideo.classList.add('hidden');
         mainImage.classList.add('hidden');
         mainYoutube.classList.remove('hidden');
-        const embedUrl = `https://www.youtube-nocookie.com/embed/${item.id}?rel=0&playsinline=1`;
+        const embedUrl = `https://www.youtube-nocookie.com/embed/${item.id}?rel=0&playsinline=1&mute=1`;
         if (mainYoutube.src !== embedUrl) mainYoutube.src = embedUrl;
       } else if (item.type === 'video') {
         mainYoutube.src = 'about:blank';
