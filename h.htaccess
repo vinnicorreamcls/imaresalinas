@@ -1,0 +1,45 @@
+RewriteEngine On
+
+# Force HTTPS and the canonical non-www host.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.imaresalinas\.com$ [NC]
+RewriteRule ^ https://imaresalinas.com%{REQUEST_URI} [R=301,L,NE]
+
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# Keep the homepage at the domain root.
+RewriteCond %{THE_REQUEST} \s/+index\.html[?\s] [NC]
+RewriteRule ^index\.html$ / [R=301,L,NE]
+
+# Redirect old page URLs to the renamed pages.
+RewriteRule ^aventura\-salinopolis(?:\.html)?/?$ /aventura-salinopolis-pousada-imare-salinas [R=301,L,NE]
+RewriteRule ^casaduna(?:\.html)?/?$ /casaduna-salinopolis-pousada-imare-salinas [R=301,L,NE]
+RewriteRule ^cultura\-salinopolis(?:\.html)?/?$ /cultura-salinopolis-pousada-imare-salinas [R=301,L,NE]
+RewriteRule ^gastronomia(?:\.html)?/?$ /gastronomia-salinopolis-pousada-imare-salinas [R=301,L,NE]
+RewriteRule ^pontosturisticos(?:\.html)?/?$ /pontosturisticos-salinopolis-pousada-imare-salinas [R=301,L,NE]
+RewriteRule ^suiteaconchego(?:\.html)?/?$ /suiteaconchego-salinopolis-pousada-imare-salinas [R=301,L,NE]
+RewriteRule ^suitebrisa(?:\.html)?/?$ /suitebrisa-salinopolis-pousada-imare-salinas [R=301,L,NE]
+RewriteRule ^suitecantinho(?:\.html)?/?$ /suitecantinho-salinopolis-pousada-imare-salinas [R=301,L,NE]
+RewriteRule ^suiteestrela(?:\.html)?/?$ /suiteestrela-salinopolis-pousada-imare-salinas [R=301,L,NE]
+RewriteRule ^suitefarol(?:\.html)?/?$ /suitefarol-salinopolis-pousada-imare-salinas [R=301,L,NE]
+
+# Redirect direct .html requests to the public clean URL.
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[?\s] [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
+
+# Serve renamed pages at their clean public URLs.
+RewriteRule ^aventura-salinopolis-pousada-imare-salinas/?$ aventura-salinopolis-pousada-imare-salinas.html [L]
+RewriteRule ^casaduna-salinopolis-pousada-imare-salinas/?$ casaduna-salinopolis-pousada-imare-salinas.html [L]
+RewriteRule ^cultura-salinopolis-pousada-imare-salinas/?$ cultura-salinopolis-pousada-imare-salinas.html [L]
+RewriteRule ^gastronomia-salinopolis-pousada-imare-salinas/?$ gastronomia-salinopolis-pousada-imare-salinas.html [L]
+RewriteRule ^pontosturisticos-salinopolis-pousada-imare-salinas/?$ pontosturisticos-salinopolis-pousada-imare-salinas.html [L]
+RewriteRule ^suiteaconchego-salinopolis-pousada-imare-salinas/?$ suiteaconchego-salinopolis-pousada-imare-salinas.html [L]
+RewriteRule ^suitebrisa-salinopolis-pousada-imare-salinas/?$ suitebrisa-salinopolis-pousada-imare-salinas.html [L]
+RewriteRule ^suitecantinho-salinopolis-pousada-imare-salinas/?$ suitecantinho-salinopolis-pousada-imare-salinas.html [L]
+RewriteRule ^suiteestrela-salinopolis-pousada-imare-salinas/?$ suiteestrela-salinopolis-pousada-imare-salinas.html [L]
+RewriteRule ^suitefarol-salinopolis-pousada-imare-salinas/?$ suitefarol-salinopolis-pousada-imare-salinas.html [L]
