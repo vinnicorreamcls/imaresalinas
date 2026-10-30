@@ -56,7 +56,7 @@
       <div class="grid gap-5 lg:grid-cols-[minmax(0,1fr)_190px]">
         <div class="gallery-main relative overflow-hidden rounded-3xl bg-slate-200 shadow-xl">
           <img id="mainImage" src="assets/img/suitecantinho/cantinho-01-salinopolis-pousada-imare-salinas.webp" alt="Suíte Cantinho — foto 1" class="h-[460px] w-full object-cover md:h-[680px]" loading="eager">
-          <video id="mainVideo" poster="assets/img/suitecantinho/cantinho-01-salinopolis-pousada-imare-salinas.webp" class="hidden h-[460px] w-full bg-black object-contain md:h-[680px]" controls playsinline preload="metadata" aria-label="Vídeo da Suíte Cantinho"></video>
+          <video id="mainVideo" poster="assets/img/suitecantinho/cantinho-01-salinopolis-pousada-imare-salinas.webp" class="hidden h-[460px] w-full bg-black object-contain md:h-[680px]" controls muted playsinline preload="metadata" aria-label="Vídeo da Suíte Cantinho"></video>
           <div class="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 bg-gradient-to-t from-black/75 to-transparent p-5 pt-20 text-white">
             <p id="imageCaption" class="text-sm font-semibold md:text-base">Suíte Cantinho — foto 1</p>
             <span id="imageCount" class="shrink-0 rounded-full bg-black/45 px-3 py-1 text-xs font-bold">1 / 16</span>
@@ -193,7 +193,7 @@
   <script>
     const items = [
       {type:'image', src:'assets/img/suitecantinho/cantinho-01-salinopolis-pousada-imare-salinas.webp', label:'Suíte Cantinho — foto 1'},
-      {type:'video', src:'assets/video/suitecantinho-salinopolis-pousada-imare-salinas.mp4', label:'Vídeo da Suíte Cantinho'},
+      {type:'video', src:'assets/video/suitecantinho-galeria-silenciosa-salinopolis-pousada-imare-salinas.mp4', label:'Vídeo da Suíte Cantinho'},
       {type:'image', src:'assets/img/suitecantinho/cantinho-02-salinopolis-pousada-imare-salinas.webp', label:'Suíte Cantinho — foto 2'},
       {type:'image', src:'assets/img/suitecantinho/cantinho-03-salinopolis-pousada-imare-salinas.webp', label:'Suíte Cantinho — foto 3'},
       {type:'image', src:'assets/img/suitecantinho/cantinho-04-salinopolis-pousada-imare-salinas.webp', label:'Suíte Cantinho — foto 4'},
@@ -212,6 +212,9 @@
     let current = 0;
     const mainImage = document.getElementById('mainImage');
     const mainVideo = document.getElementById('mainVideo');
+    mainVideo.muted = true;
+    mainVideo.defaultMuted = true;
+    mainVideo.volume = 0;
     const caption = document.getElementById('imageCaption');
     const count = document.getElementById('imageCount');
     const rail = document.getElementById('thumbRail');
@@ -221,6 +224,8 @@
       caption.textContent = item.label;
       count.textContent = `${current + 1} / ${items.length}`;
       if (item.type === 'video') {
+        mainVideo.muted = true;
+        mainVideo.volume = 0;
         mainImage.classList.add('hidden');
         mainVideo.classList.remove('hidden');
         if (mainVideo.getAttribute('src') !== item.src) {
