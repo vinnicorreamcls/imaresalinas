@@ -73,9 +73,10 @@
       <div class="grid gap-5 lg:grid-cols-[minmax(0,1fr)_190px]">
         <div class="gallery-main relative overflow-hidden rounded-3xl bg-slate-200 shadow-xl">
           <img id="mainImage" src="assets/img/casaduna/01-quarto-casaduna-salinopolis-pousada-imare-salinas.webp" alt="01 Quarto Casaduna" class="h-[460px] w-full object-cover md:h-[680px]" loading="eager">
+          <div id="mainYoutube" class="hidden h-[460px] w-full bg-black md:h-[680px]" aria-label="Vídeo da Casa Duna no YouTube"></div>
           <div class="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 bg-gradient-to-t from-black/75 to-transparent p-5 pt-20 text-white">
             <p id="imageCaption" class="text-sm font-semibold md:text-base">01 Quarto Casaduna</p>
-            <span id="imageCount" class="shrink-0 rounded-full bg-black/45 px-3 py-1 text-xs font-bold">1 / 39</span>
+            <span id="imageCount" class="shrink-0 rounded-full bg-black/45 px-3 py-1 text-xs font-bold">1 / 40</span>
           </div>
           <button id="prevBtn" type="button" aria-label="Imagem anterior" class="absolute left-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl text-[#002353] shadow transition hover:bg-[#f4c95d]"><svg class="fa-icon" width="1em" height="1em" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.125em"><use href="assets/icons.svg#fa-solid-chevron-left"></use></svg></button>
           <button id="nextBtn" type="button" aria-label="Próxima imagem" class="absolute right-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl text-[#002353] shadow transition hover:bg-[#f4c95d]"><svg class="fa-icon" width="1em" height="1em" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.125em"><use href="assets/icons.svg#fa-solid-chevron-right"></use></svg></button>
@@ -275,17 +276,71 @@
       "37 Casaduna",
       "38 Estacionamento Casaduna",
       "39 Imaresalinas Entrada"];
+    images.splice(1, 0, null);
+    labels.splice(1, 0, "Vídeo da Casa Duna");
     let current = 0;
     const mainImage = document.getElementById('mainImage');
+    const mainYoutube = document.getElementById('mainYoutube');
+    let youtubePlayer = null;
+    let youtubePlayerReady = false;
+    let youtubeApiPromise = null;
     const caption = document.getElementById('imageCaption');
     const count = document.getElementById('imageCount');
     const rail = document.getElementById('thumbRail');
+    function loadYoutubeApi() {
+      if (window.YT && window.YT.Player) return Promise.resolve();
+      if (!youtubeApiPromise) {
+        youtubeApiPromise = new Promise((resolve) => {
+          const previousReady = window.onYouTubeIframeAPIReady;
+          window.onYouTubeIframeAPIReady = () => {
+            if (typeof previousReady === 'function') previousReady();
+            resolve();
+          };
+          const script = document.createElement('script');
+          script.src = 'https://www.youtube.com/iframe_api';
+          script.async = true;
+          document.head.appendChild(script);
+        });
+      }
+      return youtubeApiPromise;
+    }
+    async function showYoutube() {
+      await loadYoutubeApi();
+      if (images[current] !== null) return;
+      if (!youtubePlayer) {
+        youtubePlayer = new YT.Player('mainYoutube', {
+          width: '100%', height: '100%', videoId: 'ja6lcNX72L4',
+          playerVars: { playsinline: 1, rel: 0 },
+          events: {
+            onReady(event) {
+              youtubePlayerReady = true;
+              event.target.mute();
+              event.target.getIframe().title = 'Vídeo da Casa Duna no YouTube';
+              if (images[current] !== null) event.target.pauseVideo();
+            }
+          }
+        });
+      } else if (youtubePlayerReady) {
+        youtubePlayer.mute();
+        youtubePlayer.cueVideoById('ja6lcNX72L4');
+      }
+    }
     function showImage(index) {
       current = (index + images.length) % images.length;
-      mainImage.src = images[current];
-      mainImage.alt = labels[current];
+      const isYoutube = images[current] === null;
       caption.textContent = labels[current];
       count.textContent = `${current + 1} / ${images.length}`;
+      if (isYoutube) {
+        mainImage.classList.add('hidden');
+        mainYoutube.classList.remove('hidden');
+        showYoutube();
+      } else {
+        if (youtubePlayerReady) youtubePlayer.pauseVideo();
+        mainYoutube.classList.add('hidden');
+        mainImage.classList.remove('hidden');
+        mainImage.src = images[current];
+        mainImage.alt = labels[current];
+      }
       document.querySelectorAll('.thumb').forEach((button, i) => button.classList.toggle('active', i === current));
       const active = rail.querySelector('.thumb.active');
       if (active && window.matchMedia('(min-width: 768px)').matches) {
@@ -295,8 +350,13 @@
     images.forEach((src, index) => {
       const button = document.createElement('button');
       button.type='button'; button.className='thumb h-24 w-full shrink-0 overflow-hidden rounded-xl bg-slate-200';
-      button.setAttribute('aria-label', `Ver imagem ${index+1}: ${labels[index]}`);
-      button.innerHTML = `<img src="${src}" alt="" loading="lazy" class="h-full w-full object-cover">`;
+      button.setAttribute('aria-label', `Ver ${images[index] === null ? 'vídeo' : 'imagem'} ${index+1}: ${labels[index]}`);
+      if (src === null) {
+        button.classList.add('relative');
+        button.innerHTML = `<img src="assets/img/casaduna/01-quarto-casaduna-salinopolis-pousada-imare-salinas.webp" alt="" loading="lazy" class="h-full w-full object-cover"><span class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/25 text-white"><svg class="fa-icon text-3xl drop-shadow" width="1em" height="1em" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.125em"><use href="assets/icons.svg#fa-solid-circle-play"></use></svg></span>`;
+      } else {
+        button.innerHTML = `<img src="${src}" alt="" loading="lazy" class="h-full w-full object-cover">`;
+      }
       button.addEventListener('click', () => showImage(index));
       rail.appendChild(button);
     });
