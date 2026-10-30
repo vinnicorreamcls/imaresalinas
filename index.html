@@ -19,7 +19,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16-salinopolis-pousada-imare-salinas.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon-salinopolis-pousada-imare-salinas.png">
 <meta name="theme-color" content="#1A5F7A">
-<script>window.tailwind=window.tailwind||{};window.tailwind.config={theme:{extend:{colors:{ocean:'#1A5F7A',sun:'#F2A900',ink:'#111827',mist:'#F9FAFB'},fontFamily:{sans:['Outfit','ui-sans-serif','system-ui']},boxShadow:{soft:'0 18px 50px rgba(17,24,39,.10)'}}}}</script><script defer src="https://cdn.tailwindcss.com"></script><link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
+<script src="https://cdn.tailwindcss.com"></script><script>tailwind.config={theme:{extend:{colors:{ocean:'#1A5F7A',sun:'#F2A900',ink:'#111827',mist:'#F9FAFB'},fontFamily:{sans:['Outfit','ui-sans-serif','system-ui']},boxShadow:{soft:'0 18px 50px rgba(17,24,39,.10)'}}}}</script><link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Allura&family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allura&family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -59,7 +59,7 @@
 /* Keep cards and long labels inside their columns on narrow iPhone viewports. */
 .grid > *, .flex > * { min-width: 0; }
 img, video, iframe { max-width: 100%; }
-p, li, h1, h2, h3, h4, a, button { overflow-wrap: anywhere; }
+p, li, h1, h2, h3, h4, a, button { overflow-wrap: break-word; word-wrap: break-word; }
 </style>
 </head>
 <body class="bg-mist text-ink antialiased">
