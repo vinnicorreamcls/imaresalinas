@@ -58,6 +58,7 @@
         <div class="gallery-main relative overflow-hidden rounded-3xl bg-slate-200 shadow-xl">
           <img id="mainImage" src="assets/img/suiteestrela/estrela-01-salinopolis-pousada-imare-salinas.webp" alt="Suíte Estrela — foto 1" class="h-[460px] w-full object-cover md:h-[680px]" loading="eager">
           <video id="mainVideo" poster="assets/img/suiteestrela/estrela-01-salinopolis-pousada-imare-salinas.webp" class="hidden h-[460px] w-full bg-black object-contain md:h-[680px]" controls muted playsinline preload="metadata" aria-label="Vídeo da Suíte Estrela"></video>
+          <iframe id="mainYoutube" src="about:blank" class="hidden h-[460px] w-full border-0 bg-black md:h-[680px]" title="Vídeo da Suíte Estrela no YouTube" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
           <div class="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 bg-gradient-to-t from-black/75 to-transparent p-5 pt-20 text-white">
             <p id="imageCaption" class="text-sm font-semibold md:text-base">Suíte Estrela — foto 1</p>
             <span id="imageCount" class="shrink-0 rounded-full bg-black/45 px-3 py-1 text-xs font-bold">1 / 13</span>
@@ -194,7 +195,7 @@
   <script>
     const items = [
       {type:'image', src:'assets/img/suiteestrela/estrela-01-salinopolis-pousada-imare-salinas.webp', label:'Suíte Estrela — foto 1'},
-      {type:'video', src:'assets/video/suiteestrela-galeria-silenciosa-salinopolis-pousada-imare-salinas.mp4', label:'Vídeo da Suíte Estrela'},
+      {type:'youtube', id:'1x0DER2kVQ8', label:'Vídeo da Suíte Estrela'},
       {type:'image', src:'assets/img/suiteestrela/estrela-03-orientada-salinopolis-pousada-imare-salinas.webp', label:'Suíte Estrela — foto 2'},
       {type:'image', src:'assets/img/suiteestrela/estrela-04-orientada-salinopolis-pousada-imare-salinas.webp', label:'Suíte Estrela — foto 3'},
       {type:'image', src:'assets/img/suiteestrela/estrela-05-salinopolis-pousada-imare-salinas.webp', label:'Suíte Estrela — foto 4'},
@@ -210,6 +211,7 @@
     let current = 0;
     const mainImage = document.getElementById('mainImage');
     const mainVideo = document.getElementById('mainVideo');
+    const mainYoutube = document.getElementById('mainYoutube');
     mainVideo.muted = true;
     mainVideo.defaultMuted = true;
     mainVideo.volume = 0;
@@ -221,7 +223,16 @@
       const item = items[current];
       caption.textContent = item.label;
       count.textContent = `${current + 1} / ${items.length}`;
-      if (item.type === 'video') {
+      if (item.type === 'youtube') {
+        mainVideo.pause();
+        mainVideo.classList.add('hidden');
+        mainImage.classList.add('hidden');
+        mainYoutube.classList.remove('hidden');
+        const embedUrl = `https://www.youtube-nocookie.com/embed/${item.id}?rel=0&playsinline=1`;
+        if (mainYoutube.src !== embedUrl) mainYoutube.src = embedUrl;
+      } else if (item.type === 'video') {
+        mainYoutube.src = 'about:blank';
+        mainYoutube.classList.add('hidden');
         mainVideo.muted = true;
         mainVideo.volume = 0;
         mainImage.classList.add('hidden');
@@ -232,6 +243,8 @@
         }
         mainVideo.setAttribute('aria-label', item.label);
       } else {
+        mainYoutube.src = 'about:blank';
+        mainYoutube.classList.add('hidden');
         mainVideo.pause();
         mainVideo.classList.add('hidden');
         mainImage.classList.remove('hidden');
@@ -249,7 +262,10 @@
       button.type = 'button';
       button.className = 'thumb h-24 w-full shrink-0 overflow-hidden rounded-xl bg-slate-200';
       button.setAttribute('aria-label', `Ver item ${index + 1}: ${item.label}`);
-      if (item.type === 'video') {
+      if (item.type === 'youtube') {
+        button.classList.add('relative');
+        button.innerHTML = `<img src="assets/img/suiteestrela/estrela-01-salinopolis-pousada-imare-salinas.webp" alt="" loading="lazy" class="h-full w-full object-cover"><span class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/25 text-white"><svg class="fa-icon text-3xl drop-shadow" width="1em" height="1em" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.125em"><use href="assets/icons.svg#fa-solid-circle-play"></use></svg></span>`;
+      } else if (item.type === 'video') {
         button.classList.add('relative');
         button.innerHTML = `<video src="${item.src}#t=1" poster="assets/img/suiteestrela/estrela-01-salinopolis-pousada-imare-salinas.webp" muted playsinline preload="metadata" class="h-full w-full object-cover" aria-hidden="true"></video><span class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/25 text-white"><svg class="fa-icon text-3xl drop-shadow" width="1em" height="1em" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.125em"><use href="assets/icons.svg#fa-solid-circle-play"></use></svg></span>`;
         const preview = button.querySelector('video');
