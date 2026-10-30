@@ -22,7 +22,7 @@
   <meta name="theme-color" content="#1A5F7A">
   <script src="https://cdn.tailwindcss.com"></script><script>tailwind.config={theme:{extend:{colors:{ocean:'#1A5F7A',sun:'#F2A900',ink:'#111827',mist:'#F9FAFB'},fontFamily:{sans:['Outfit','ui-sans-serif','system-ui']},boxShadow:{soft:'0 18px 50px rgba(17,24,39,.10)'}}}}</script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,8 +61,8 @@
             <p id="imageCaption" class="text-sm font-semibold md:text-base">Suíte Cantinho — foto 1</p>
             <span id="imageCount" class="shrink-0 rounded-full bg-black/45 px-3 py-1 text-xs font-bold">1 / 16</span>
           </div>
-          <button id="prevBtn" type="button" aria-label="Imagem anterior" class="absolute left-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl text-[#002353] shadow transition hover:bg-[#f4c95d]"><i class="fa-solid fa-chevron-left"></i></button>
-          <button id="nextBtn" type="button" aria-label="Próxima imagem" class="absolute right-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl text-[#002353] shadow transition hover:bg-[#f4c95d]"><i class="fa-solid fa-chevron-right"></i></button>
+          <button id="prevBtn" type="button" aria-label="Imagem anterior" class="absolute left-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl text-[#002353] shadow transition hover:bg-[#f4c95d]"><svg class="fa-icon" width="1em" height="1em" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.125em"><use href="assets/icons.svg#fa-solid-chevron-left"></use></svg></button>
+          <button id="nextBtn" type="button" aria-label="Próxima imagem" class="absolute right-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl text-[#002353] shadow transition hover:bg-[#f4c95d]"><svg class="fa-icon" width="1em" height="1em" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.125em"><use href="assets/icons.svg#fa-solid-chevron-right"></use></svg></button>
         </div>
         <div class="thumb-rail flex max-h-[680px] flex-col gap-3 overflow-y-auto pr-1" id="thumbRail" aria-label="Miniaturas da galeria"></div>
       </div>
@@ -124,7 +124,7 @@
 </section>
 </main>
   <a href="https://wa.me/5527995338163" target="_blank" rel="noopener" aria-label="Reservar pelo WhatsApp" class="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition hover:scale-110">
-    <i class="fa-brands fa-whatsapp text-2xl" aria-hidden="true"></i>
+    <svg class="fa-icon text-2xl" width="1em" height="1em" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.125em"><use href="assets/icons.svg#fa-brands-whatsapp"></use></svg>
   </a>
 <div class="footer-wave" aria-hidden="true"><svg viewBox="0 0 1440 100" preserveAspectRatio="none" role="presentation"><path d="M0 52 C170 20 300 20 480 46 C650 71 775 73 940 43 C1110 12 1260 17 1440 51 L1440 100 L0 100 Z" fill="#fff"></path></svg></div>
 <footer id="footer" class="bg-white text-[#002353]">
@@ -135,10 +135,10 @@
       </a>
       <p class="mb-2 text-base font-bold text-[#002353]">Conheça Salinas!</p><p class="text-sm text-slate-600">🌴 Sua Guest House em Salinópolis, PA</p>
       <div class="mt-7 flex items-center gap-3" aria-label="Redes sociais da Imaré Salinas">
-        <a href="https://www.instagram.com/imaresalinaspa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Imaré Salinas" class="text-2xl text-[#C13584] transition hover:scale-110"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=61578661628610" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Imaré Salinas" class="text-2xl text-[#1877F2] transition hover:scale-110"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://tiktok.com/@imare.salinas" target="_blank" rel="noopener noreferrer" aria-label="TikTok da Imaré Salinas" class="text-2xl text-black transition hover:scale-110"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="https://www.airbnb.com.br/users/show/740378056" target="_blank" rel="noopener noreferrer" aria-label="Imaré Salinas no Airbnb" class="text-2xl text-[#FF5A5F] transition hover:scale-110"><i class="fa-brands fa-airbnb"></i></a>
+        <a href="https://www.instagram.com/imaresalinaspa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Imaré Salinas" class="text-2xl text-[#C13584] transition hover:scale-110"><svg class="fa-icon" width="1em" height="1em" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.125em"><use href="assets/icons.svg#fa-brands-instagram"></use></svg></a>
+        <a href="https://www.facebook.com/profile.php?id=61578661628610" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Imaré Salinas" class="text-2xl text-[#1877F2] transition hover:scale-110"><svg class="fa-icon" width="1em" height="1em" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.125em"><use href="assets/icons.svg#fa-brands-facebook"></use></svg></a>
+        <a href="https://tiktok.com/@imare.salinas" target="_blank" rel="noopener noreferrer" aria-label="TikTok da Imaré Salinas" class="text-2xl text-black transition hover:scale-110"><svg class="fa-icon" width="1em" height="1em" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.125em"><use href="assets/icons.svg#fa-brands-tiktok"></use></svg></a>
+        <a href="https://www.airbnb.com.br/users/show/740378056" target="_blank" rel="noopener noreferrer" aria-label="Imaré Salinas no Airbnb" class="text-2xl text-[#FF5A5F] transition hover:scale-110"><svg class="fa-icon" width="1em" height="1em" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.125em"><use href="assets/icons.svg#fa-brands-airbnb"></use></svg></a>
       </div>
     </div>
     <div>
@@ -253,7 +253,7 @@
       button.setAttribute('aria-label', `Ver item ${index + 1}: ${item.label}`);
       if (item.type === 'video') {
         button.classList.add('relative');
-        button.innerHTML = `<video src="${item.src}#t=1" poster="assets/img/suitecantinho/cantinho-01-salinopolis-pousada-imare-salinas.webp" muted playsinline preload="metadata" class="h-full w-full object-cover" aria-hidden="true"></video><span class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/25 text-white"><i class="fa-solid fa-circle-play text-3xl drop-shadow"></i></span>`;
+        button.innerHTML = `<video src="${item.src}#t=1" poster="assets/img/suitecantinho/cantinho-01-salinopolis-pousada-imare-salinas.webp" muted playsinline preload="metadata" class="h-full w-full object-cover" aria-hidden="true"></video><span class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/25 text-white"><svg class="fa-icon text-3xl drop-shadow" width="1em" height="1em" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.125em"><use href="assets/icons.svg#fa-solid-circle-play"></use></svg></span>`;
         const preview = button.querySelector('video');
         preview.addEventListener('loadedmetadata', () => {
           if (preview.duration > 1) preview.currentTime = 1;
