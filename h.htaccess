@@ -1,0 +1,33 @@
+RewriteEngine On
+
+# Force HTTPS and the canonical non-www host.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.imaresalinas\.com$ [NC]
+RewriteRule ^ https://imaresalinas.com%{REQUEST_URI} [R=301,L,NE]
+
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# Keep the homepage at the domain root.
+RewriteCond %{THE_REQUEST} \s/+index\.html[?\s] [NC]
+RewriteRule ^index\.html$ / [R=301,L,NE]
+
+# Redirect direct requests with .html to the public clean URL.
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[?\s] [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
+
+# Map each public clean URL to its existing HTML file.
+RewriteRule ^aventura-salinopolis/?$ aventura-salinopolis.html [L]
+RewriteRule ^casaduna/?$ casaduna.html [L]
+RewriteRule ^cultura-salinopolis/?$ cultura-salinopolis.html [L]
+RewriteRule ^gastronomia/?$ gastronomia.html [L]
+RewriteRule ^pontosturisticos/?$ pontosturisticos.html [L]
+RewriteRule ^suiteaconchego/?$ suiteaconchego.html [L]
+RewriteRule ^suitebrisa/?$ suitebrisa.html [L]
+RewriteRule ^suitecantinho/?$ suitecantinho.html [L]
+RewriteRule ^suiteestrela/?$ suiteestrela.html [L]
+RewriteRule ^suitefarol/?$ suitefarol.html [L]
