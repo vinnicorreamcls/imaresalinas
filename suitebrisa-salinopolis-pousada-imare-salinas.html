@@ -74,6 +74,7 @@
         <div class="gallery-main relative overflow-hidden rounded-3xl bg-slate-200 shadow-xl">
           <img id="mainImage" src="assets/img/suitebrisa/brisa-01-salinopolis-pousada-imare-salinas.webp" alt="Suíte Brisa — foto 1" class="h-[460px] w-full object-cover md:h-[680px]" loading="eager">
           <video id="mainVideo" poster="assets/img/suitebrisa/brisa-01-salinopolis-pousada-imare-salinas.webp" class="hidden h-[460px] w-full bg-black object-contain md:h-[680px]" controls muted playsinline preload="metadata" aria-label="Vídeo da Suíte Brisa"></video>
+          <div id="mainYoutube" class="hidden h-[460px] w-full bg-black md:h-[680px]" aria-label="Vídeo da Suíte Brisa no YouTube"></div>
           <div class="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 bg-gradient-to-t from-black/75 to-transparent p-5 pt-20 text-white">
             <p id="imageCaption" class="text-sm font-semibold md:text-base">Suíte Brisa — foto 1</p>
             <span id="imageCount" class="shrink-0 rounded-full bg-black/45 px-3 py-1 text-xs font-bold">1 / 12</span>
@@ -209,7 +210,7 @@
   <script>
     const items = [
       {type:'image', src:'assets/img/suitebrisa/brisa-01-salinopolis-pousada-imare-salinas.webp', label:'Suíte Brisa — foto 1'},
-      {type:'video', src:'assets/video/suitebrisa-galeria-silenciosa-salinopolis-pousada-imare-salinas.mp4', label:'Vídeo da Suíte Brisa'},
+      {type:'youtube', id:'mhmP3GqCkX0', label:'Vídeo da Suíte Brisa'},
       {type:'image', src:'assets/img/suitebrisa/brisa-03-salinopolis-pousada-imare-salinas.webp', label:'Suíte Brisa — foto 2'},
       {type:'image', src:'assets/img/suitebrisa/brisa-04-salinopolis-pousada-imare-salinas.webp', label:'Suíte Brisa — foto 3'},
       {type:'image', src:'assets/img/suitebrisa/brisa-05-salinopolis-pousada-imare-salinas.webp', label:'Suíte Brisa — foto 4'},
@@ -224,18 +225,68 @@
     let current = 0;
     const mainImage = document.getElementById('mainImage');
     const mainVideo = document.getElementById('mainVideo');
+    const mainYoutube = document.getElementById('mainYoutube');
+    let youtubePlayer = null;
+    let youtubePlayerReady = false;
+    let youtubeApiPromise = null;
     mainVideo.muted = true;
     mainVideo.defaultMuted = true;
     mainVideo.volume = 0;
     const caption = document.getElementById('imageCaption');
     const count = document.getElementById('imageCount');
     const rail = document.getElementById('thumbRail');
+    function loadYoutubeApi() {
+      if (window.YT && window.YT.Player) return Promise.resolve();
+      if (!youtubeApiPromise) {
+        youtubeApiPromise = new Promise((resolve) => {
+          const previousReady = window.onYouTubeIframeAPIReady;
+          window.onYouTubeIframeAPIReady = () => {
+            if (typeof previousReady === 'function') previousReady();
+            resolve();
+          };
+          const script = document.createElement('script');
+          script.src = 'https://www.youtube.com/iframe_api';
+          script.async = true;
+          document.head.appendChild(script);
+        });
+      }
+      return youtubeApiPromise;
+    }
+    async function showYoutube(item) {
+      await loadYoutubeApi();
+      if (items[current]?.type !== 'youtube') return;
+      if (!youtubePlayer) {
+        youtubePlayer = new YT.Player('mainYoutube', {
+          width: '100%', height: '100%', videoId: item.id,
+          playerVars: { playsinline: 1, rel: 0 },
+          events: {
+            onReady(event) {
+              youtubePlayerReady = true;
+              event.target.mute();
+              event.target.getIframe().title = 'Vídeo da Suíte Brisa no YouTube';
+              if (items[current]?.type !== 'youtube') event.target.pauseVideo();
+            }
+          }
+        });
+      } else if (youtubePlayerReady) {
+        youtubePlayer.mute();
+        youtubePlayer.cueVideoById(item.id);
+      }
+    }
     function showMedia(index) {
       current = (index + items.length) % items.length;
       const item = items[current];
       caption.textContent = item.label;
       count.textContent = `${current + 1} / ${items.length}`;
-      if (item.type === 'video') {
+      if (item.type === 'youtube') {
+        mainVideo.pause();
+        mainVideo.classList.add('hidden');
+        mainImage.classList.add('hidden');
+        mainYoutube.classList.remove('hidden');
+        showYoutube(item);
+      } else if (item.type === 'video') {
+        if (youtubePlayerReady) youtubePlayer.pauseVideo();
+        mainYoutube.classList.add('hidden');
         mainVideo.muted = true;
         mainVideo.volume = 0;
         mainImage.classList.add('hidden');
@@ -246,6 +297,8 @@
         }
         mainVideo.setAttribute('aria-label', item.label);
       } else {
+        if (youtubePlayerReady) youtubePlayer.pauseVideo();
+        mainYoutube.classList.add('hidden');
         mainVideo.pause();
         mainVideo.classList.add('hidden');
         mainImage.classList.remove('hidden');
@@ -263,7 +316,10 @@
       button.type = 'button';
       button.className = 'thumb h-24 w-full shrink-0 overflow-hidden rounded-xl bg-slate-200';
       button.setAttribute('aria-label', `Ver item ${index + 1}: ${item.label}`);
-      if (item.type === 'video') {
+      if (item.type === 'youtube') {
+        button.classList.add('relative');
+        button.innerHTML = `<img src="assets/img/suitebrisa/brisa-01-salinopolis-pousada-imare-salinas.webp" alt="" loading="lazy" class="h-full w-full object-cover"><span class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/25 text-white"><svg class="fa-icon text-3xl drop-shadow" width="1em" height="1em" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.125em"><use href="assets/icons.svg#fa-solid-circle-play"></use></svg></span>`;
+      } else if (item.type === 'video') {
         button.classList.add('relative');
         button.innerHTML = `<video src="${item.src}#t=1" poster="assets/img/suitebrisa/brisa-01-salinopolis-pousada-imare-salinas.webp" muted playsinline preload="metadata" class="h-full w-full object-cover" aria-hidden="true"></video><span class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/25 text-white"><svg class="fa-icon text-3xl drop-shadow" width="1em" height="1em" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.125em"><use href="assets/icons.svg#fa-solid-circle-play"></use></svg></span>`;
         const preview = button.querySelector('video');
