@@ -33,7 +33,11 @@
     .display { font-family: 'Outfit', sans-serif; }
     .thumb { opacity:.62; transition:opacity .2s, transform .2s, box-shadow .2s; }
     .thumb:hover, .thumb.active { opacity:1; transform:scale(1.02); box-shadow:0 0 0 3px var(--sun); }
-    .gallery-main img { transition:opacity .25s ease; }
+    .gallery-main { height:460px; }
+    .gallery-main img, .gallery-main #mainYoutube, .gallery-main iframe { position:absolute; inset:0; width:100%; height:100%; }
+    .gallery-main img { object-fit:cover; transition:opacity .25s ease; }
+    .gallery-main iframe { border:0; }
+    @media (min-width:768px) { .gallery-main { height:680px; } }
     @media (max-width:767px) { .thumb-rail { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); max-height:none; } .thumb-rail button { height:76px; } }
   
     html{scroll-behavior:smooth;scroll-padding-top:92px} body{font-family:'DM Sans',sans-serif}.navlink{transition:color .2s}.navlink:hover{color:#F2A900}[x-cloak]{display:none!important}
@@ -76,7 +80,7 @@
           <div id="mainYoutube" class="hidden h-[460px] w-full bg-black md:h-[680px]" aria-label="Vídeo da Casa Duna no YouTube"></div>
           <div class="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 bg-gradient-to-t from-black/75 to-transparent p-5 pt-20 text-white">
             <p id="imageCaption" class="text-sm font-semibold md:text-base">01 Quarto Casaduna</p>
-            <span id="imageCount" class="shrink-0 rounded-full bg-black/45 px-3 py-1 text-xs font-bold">1 / 40</span>
+            <span id="imageCount" class="shrink-0 rounded-full bg-black/45 px-3 py-1 text-xs font-bold">1 / 26</span>
           </div>
           <button id="prevBtn" type="button" aria-label="Imagem anterior" class="absolute left-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl text-[#002353] shadow transition hover:bg-[#f4c95d]"><svg class="fa-icon" width="1em" height="1em" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.125em"><use href="assets/icons.svg#fa-solid-chevron-left"></use></svg></button>
           <button id="nextBtn" type="button" aria-label="Próxima imagem" class="absolute right-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl text-[#002353] shadow transition hover:bg-[#f4c95d]"><svg class="fa-icon" width="1em" height="1em" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-.125em"><use href="assets/icons.svg#fa-solid-chevron-right"></use></svg></button>
@@ -198,19 +202,9 @@
   </div>
 </footer>
   <script>
-    const images = ["assets/img/casaduna/01-quarto-casaduna-salinopolis-pousada-imare-salinas.webp",
-      "assets/img/casaduna/02-quarto-casaduna-salinopolis-pousada-imare-salinas.webp",
-      "assets/img/casaduna/03-quarto-casaduna-salinopolis-pousada-imare-salinas.webp",
+    const images = [
+      "assets/img/casaduna/01-quarto-casaduna-salinopolis-pousada-imare-salinas.webp",
       "assets/img/casaduna/04-quarto-casaduna-salinopolis-pousada-imare-salinas.webp",
-      "assets/img/casaduna/05-quarto-casaduna-salinopolis-pousada-imare-salinas.webp",
-      "assets/img/casaduna/06-quarto-casaduna-salinopolis-pousada-imare-salinas.webp",
-      "assets/img/casaduna/07-quarto-casaduna-salinopolis-pousada-imare-salinas.webp",
-      "assets/img/casaduna/08-quarto-casaduna-salinopolis-pousada-imare-salinas.webp",
-      "assets/img/casaduna/09-quarto-casaduna-salinopolis-pousada-imare-salinas.webp",
-      "assets/img/casaduna/10-quarto-casaduna-salinopolis-pousada-imare-salinas.webp",
-      "assets/img/casaduna/11-quarto-casaduna-salinopolis-pousada-imare-salinas.webp",
-      "assets/img/casaduna/12-quarto-casaduna-salinopolis-pousada-imare-salinas.webp",
-      "assets/img/casaduna/13-quarto-casaduna-salinopolis-pousada-imare-salinas.webp",
       "assets/img/casaduna/14-quarto-casaduna-salinopolis-pousada-imare-salinas.webp",
       "assets/img/casaduna/15-cozinha-casaduna-salinopolis-pousada-imare-salinas.webp",
       "assets/img/casaduna/16-cozinha-casaduna-salinopolis-pousada-imare-salinas.webp",
@@ -221,10 +215,7 @@
       "assets/img/casaduna/21-banheiro-casaduna-salinopolis-pousada-imare-salinas.webp",
       "assets/img/casaduna/22-banheiro-casaduna-salinopolis-pousada-imare-salinas.webp",
       "assets/img/casaduna/23-banheiro-casaduna-salinopolis-pousada-imare-salinas.webp",
-      "assets/img/casaduna/24-banheiro-casaduna-salinopolis-pousada-imare-salinas.webp",
-      "assets/img/casaduna/25-banheiro-casaduna-salinopolis-pousada-imare-salinas.webp",
       "assets/img/casaduna/26-areaservico-casaduna-salinopolis-pousada-imare-salinas.webp",
-      "assets/img/casaduna/27-espacotrabalho-casaduna-salinopolis-pousada-imare-salinas.webp",
       "assets/img/casaduna/28-churrasqueira-casaduna-salinopolis-pousada-imare-salinas.webp",
       "assets/img/casaduna/29-churrasqueira-casaduna-salinopolis-pousada-imare-salinas.webp",
       "assets/img/casaduna/30-sala-casaduna-salinopolis-pousada-imare-salinas.webp",
@@ -237,19 +228,9 @@
       "assets/img/casaduna/37-casaduna-salinopolis-pousada-imare-salinas.webp",
       "assets/img/casaduna/38-estacionamento-casaduna-salinopolis-pousada-imare-salinas.webp",
       "assets/img/casaduna/39-imaresalinas-entrada-salinopolis-pousada-imare-salinas.webp"];
-    const labels = ["01 Quarto Casaduna",
-      "02 Quarto Casaduna",
-      "03 Quarto Casaduna",
+    const labels = [
+      "01 Quarto Casaduna",
       "04 Quarto Casaduna",
-      "05 Quarto Casaduna",
-      "06 Quarto Casaduna",
-      "07 Quarto Casaduna",
-      "08 Quarto Casaduna",
-      "09 Quarto Casaduna",
-      "10 Quarto Casaduna",
-      "11 Quarto Casaduna",
-      "12 Quarto Casaduna",
-      "13 Quarto Casaduna",
       "14 Quarto Casaduna",
       "15 Cozinha Casaduna",
       "16 Cozinha Casaduna",
@@ -260,10 +241,7 @@
       "21 Banheiro Casaduna",
       "22 Banheiro Casaduna",
       "23 Banheiro Casaduna",
-      "24 Banheiro Casaduna",
-      "25 Banheiro Casaduna",
       "26 Areaservico Casaduna",
-      "27 Espacotrabalho Casaduna",
       "28 Churrasqueira Casaduna",
       "29 Churrasqueira Casaduna",
       "30 Sala Casaduna",
