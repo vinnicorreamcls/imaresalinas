@@ -77,14 +77,27 @@ img, video, iframe { max-width: 100%; }
 }
 </style>
   <meta name="google-site-verification" content="vwoCSAkFft8esZR0d5O3jP34L43iGAxIuz02FyuItRc" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WEXCM6B247"></script>
+<!-- Google tag carregado após o render inicial -->
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  window.gtag = window.gtag || function(){dataLayer.push(arguments);};
   gtag('js', new Date());
-
   gtag('config', 'G-WEXCM6B247');
+  window.addEventListener('load', function() {
+    var loadGoogleTag = function() {
+      if (document.querySelector('script[data-google-analytics]')) return;
+      var script = document.createElement('script');
+      script.async = true;
+      script.dataset.googleAnalytics = 'true';
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-WEXCM6B247';
+      document.head.appendChild(script);
+    };
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(loadGoogleTag, { timeout: 2000 });
+    } else {
+      window.setTimeout(loadGoogleTag, 1000);
+    }
+  }, { once: true });
 </script>
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -209,7 +222,7 @@ img, video, iframe { max-width: 100%; }
   </div>
 </aside>
 <div class="flex min-h-36 items-center justify-center rounded-3xl bg-white p-6 shadow-soft md:p-7" aria-label="Logo da pousada Imaré Salinas">
-  <img src="assets/img/imaresalinas-logo-recortada-salinopolis-pousada-imare-salinas.webp" alt="Imaré Salinas — Guest House" loading="lazy" decoding="async" class="block max-h-32 w-full object-contain" srcset="assets/img/imaresalinas-logo-recortada-salinopolis-pousada-imare-salinas-128w.webp 128w, assets/img/imaresalinas-logo-recortada-salinopolis-pousada-imare-salinas-256w.webp 256w, assets/img/imaresalinas-logo-recortada-salinopolis-pousada-imare-salinas-384w.webp 384w, assets/img/imaresalinas-logo-recortada-salinopolis-pousada-imare-salinas.webp 1346w" sizes="170px">
+  <img width="1346" height="1044" src="assets/img/imaresalinas-logo-recortada-salinopolis-pousada-imare-salinas.webp" alt="Imaré Salinas — Guest House" loading="lazy" decoding="async" class="block max-h-32 w-full object-contain" srcset="assets/img/imaresalinas-logo-recortada-salinopolis-pousada-imare-salinas-128w.webp 128w, assets/img/imaresalinas-logo-recortada-salinopolis-pousada-imare-salinas-256w.webp 256w, assets/img/imaresalinas-logo-recortada-salinopolis-pousada-imare-salinas-384w.webp 384w, assets/img/imaresalinas-logo-recortada-salinopolis-pousada-imare-salinas.webp 1346w" sizes="170px">
 </div><div class="mt-5 w-full rounded-3xl bg-white p-5 shadow-soft md:p-6">
   <p class="mb-3 text-sm font-bold tracking-wide text-[#002353]">PARCEIROS:</p>
   <div class="grid grid-cols-2 items-center gap-4">
