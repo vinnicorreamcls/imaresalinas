@@ -1,14 +1,333 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://imaresalinas.com/</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://imaresalinas.com/aventura-salinopolis-pousada-imare-salinas</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://imaresalinas.com/casaduna-salinopolis-pousada-imare-salinas</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://imaresalinas.com/cultura-salinopolis-pousada-imare-salinas</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://imaresalinas.com/gastronomia-salinopolis-pousada-imare-salinas</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://imaresalinas.com/pontosturisticos-salinopolis-pousada-imare-salinas</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://imaresalinas.com/suiteaconchego-salinopolis-pousada-imare-salinas</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://imaresalinas.com/suitebrisa-salinopolis-pousada-imare-salinas</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://imaresalinas.com/suitecantinho-salinopolis-pousada-imare-salinas</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://imaresalinas.com/suiteestrela-salinopolis-pousada-imare-salinas</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://imaresalinas.com/suitefarol-salinopolis-pousada-imare-salinas</loc><lastmod>2026-10-30</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://imaresalinas.com/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/en/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/es/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/aventura-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/aventura-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/aventura-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/aventura-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/aventura-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/en/aventura-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/aventura-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/aventura-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/aventura-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/aventura-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/es/aventura-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/aventura-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/aventura-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/aventura-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/aventura-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/casaduna-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/casaduna-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/casaduna-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/casaduna-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/casaduna-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/en/casaduna-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/casaduna-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/casaduna-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/casaduna-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/casaduna-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/es/casaduna-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/casaduna-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/casaduna-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/casaduna-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/casaduna-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/cultura-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/cultura-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/cultura-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/cultura-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/cultura-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/en/cultura-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/cultura-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/cultura-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/cultura-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/cultura-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/es/cultura-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/cultura-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/cultura-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/cultura-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/cultura-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/gastronomia-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/gastronomia-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/gastronomia-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/gastronomia-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/gastronomia-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/en/gastronomia-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/gastronomia-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/gastronomia-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/gastronomia-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/gastronomia-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/es/gastronomia-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/gastronomia-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/gastronomia-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/gastronomia-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/gastronomia-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/pontosturisticos-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/pontosturisticos-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/pontosturisticos-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/pontosturisticos-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/pontosturisticos-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/en/pontosturisticos-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/pontosturisticos-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/pontosturisticos-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/pontosturisticos-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/pontosturisticos-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/es/pontosturisticos-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/pontosturisticos-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/pontosturisticos-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/pontosturisticos-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/pontosturisticos-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/suiteaconchego-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/suiteaconchego-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/suiteaconchego-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/suiteaconchego-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/suiteaconchego-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/en/suiteaconchego-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/suiteaconchego-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/suiteaconchego-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/suiteaconchego-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/suiteaconchego-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/es/suiteaconchego-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/suiteaconchego-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/suiteaconchego-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/suiteaconchego-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/suiteaconchego-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/suitebrisa-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/suitebrisa-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/suitebrisa-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/suitebrisa-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/suitebrisa-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/en/suitebrisa-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/suitebrisa-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/suitebrisa-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/suitebrisa-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/suitebrisa-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/es/suitebrisa-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/suitebrisa-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/suitebrisa-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/suitebrisa-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/suitebrisa-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/suitecantinho-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/suitecantinho-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/suitecantinho-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/suitecantinho-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/suitecantinho-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/en/suitecantinho-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/suitecantinho-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/suitecantinho-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/suitecantinho-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/suitecantinho-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/es/suitecantinho-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/suitecantinho-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/suitecantinho-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/suitecantinho-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/suitecantinho-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/suiteestrela-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/suiteestrela-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/suiteestrela-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/suiteestrela-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/suiteestrela-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/en/suiteestrela-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/suiteestrela-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/suiteestrela-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/suiteestrela-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/suiteestrela-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/es/suiteestrela-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/suiteestrela-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/suiteestrela-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/suiteestrela-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/suiteestrela-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/suitefarol-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/suitefarol-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/suitefarol-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/suitefarol-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/suitefarol-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/en/suitefarol-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/suitefarol-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/suitefarol-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/suitefarol-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/suitefarol-salinopolis-pousada-imare-salinas"/>
+  </url>
+  <url>
+    <loc>https://imaresalinas.com/es/suitefarol-salinopolis-pousada-imare-salinas</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://imaresalinas.com/suitefarol-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://imaresalinas.com/en/suitefarol-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://imaresalinas.com/es/suitefarol-salinopolis-pousada-imare-salinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imaresalinas.com/suitefarol-salinopolis-pousada-imare-salinas"/>
+  </url>
 </urlset>

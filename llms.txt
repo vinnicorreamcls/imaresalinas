@@ -1,30 +1,49 @@
 # Imaré Salinas
 
-> Pousada familiar em Salinópolis, Pará, com suítes, Casa Duna e informações para planejar passeios na região.
+> Family guesthouse in Salinópolis, Pará, with suites, Casa Duna, and local travel information.
 
-## Site oficial
+## Official website
 
-- https://imaresalinas.com/
+- Portuguese: https://imaresalinas.com/
+- English: https://imaresalinas.com/en/
+- Spanish: https://imaresalinas.com/es/
 - Canonical host: https://imaresalinas.com
-- Idioma principal: Português do Brasil (pt-BR)
 
-## Páginas principais
+## Main pages
+- [PT: Suíte Aconchego](https://imaresalinas.com/suiteaconchego-salinopolis-pousada-imare-salinas)
+- [EN: Aconchego Suite](https://imaresalinas.com/en/suiteaconchego-salinopolis-pousada-imare-salinas)
+- [ES: Suite Aconchego](https://imaresalinas.com/es/suiteaconchego-salinopolis-pousada-imare-salinas)
+- [PT: Suíte Brisa](https://imaresalinas.com/suitebrisa-salinopolis-pousada-imare-salinas)
+- [EN: Brisa Suite](https://imaresalinas.com/en/suitebrisa-salinopolis-pousada-imare-salinas)
+- [ES: Suite Brisa](https://imaresalinas.com/es/suitebrisa-salinopolis-pousada-imare-salinas)
+- [PT: Suíte Cantinho](https://imaresalinas.com/suitecantinho-salinopolis-pousada-imare-salinas)
+- [EN: Cantinho Suite](https://imaresalinas.com/en/suitecantinho-salinopolis-pousada-imare-salinas)
+- [ES: Suite Cantinho](https://imaresalinas.com/es/suitecantinho-salinopolis-pousada-imare-salinas)
+- [PT: Suíte Estrela](https://imaresalinas.com/suiteestrela-salinopolis-pousada-imare-salinas)
+- [EN: Estrela Suite](https://imaresalinas.com/en/suiteestrela-salinopolis-pousada-imare-salinas)
+- [ES: Suite Estrela](https://imaresalinas.com/es/suiteestrela-salinopolis-pousada-imare-salinas)
+- [PT: Suíte Farol](https://imaresalinas.com/suitefarol-salinopolis-pousada-imare-salinas)
+- [EN: Farol Suite](https://imaresalinas.com/en/suitefarol-salinopolis-pousada-imare-salinas)
+- [ES: Suite Farol](https://imaresalinas.com/es/suitefarol-salinopolis-pousada-imare-salinas)
+- [PT: Casa Duna](https://imaresalinas.com/casaduna-salinopolis-pousada-imare-salinas)
+- [EN: Casa Duna](https://imaresalinas.com/en/casaduna-salinopolis-pousada-imare-salinas)
+- [ES: Casa Duna](https://imaresalinas.com/es/casaduna-salinopolis-pousada-imare-salinas)
+- [PT: Pontos turísticos](https://imaresalinas.com/pontosturisticos-salinopolis-pousada-imare-salinas)
+- [EN: Tourist attractions](https://imaresalinas.com/en/pontosturisticos-salinopolis-pousada-imare-salinas)
+- [ES: Lugares turísticos](https://imaresalinas.com/es/pontosturisticos-salinopolis-pousada-imare-salinas)
+- [PT: Aventura em Salinópolis](https://imaresalinas.com/aventura-salinopolis-pousada-imare-salinas)
+- [EN: Adventure in Salinópolis](https://imaresalinas.com/en/aventura-salinopolis-pousada-imare-salinas)
+- [ES: Aventura en Salinópolis](https://imaresalinas.com/es/aventura-salinopolis-pousada-imare-salinas)
+- [PT: Cultura e eventos](https://imaresalinas.com/cultura-salinopolis-pousada-imare-salinas)
+- [EN: Culture and events](https://imaresalinas.com/en/cultura-salinopolis-pousada-imare-salinas)
+- [ES: Cultura y eventos](https://imaresalinas.com/es/cultura-salinopolis-pousada-imare-salinas)
+- [PT: Gastronomia paraense](https://imaresalinas.com/gastronomia-salinopolis-pousada-imare-salinas)
+- [EN: Cuisine of Pará](https://imaresalinas.com/en/gastronomia-salinopolis-pousada-imare-salinas)
+- [ES: Gastronomía de Pará](https://imaresalinas.com/es/gastronomia-salinopolis-pousada-imare-salinas)
 
-- [Início e acomodações](https://imaresalinas.com/)
-- [Suíte Aconchego](https://imaresalinas.com/suiteaconchego-salinopolis-pousada-imare-salinas)
-- [Suíte Brisa](https://imaresalinas.com/suitebrisa-salinopolis-pousada-imare-salinas)
-- [Suíte Cantinho](https://imaresalinas.com/suitecantinho-salinopolis-pousada-imare-salinas)
-- [Suíte Estrela](https://imaresalinas.com/suiteestrela-salinopolis-pousada-imare-salinas)
-- [Suíte Farol](https://imaresalinas.com/suitefarol-salinopolis-pousada-imare-salinas)
-- [Casa Duna](https://imaresalinas.com/casaduna-salinopolis-pousada-imare-salinas)
-- [Pontos turísticos](https://imaresalinas.com/pontosturisticos-salinopolis-pousada-imare-salinas)
-- [Aventura em Salinópolis](https://imaresalinas.com/aventura-salinopolis-pousada-imare-salinas-pousada-imare-salinas)
-- [Cultura e eventos](https://imaresalinas.com/cultura-salinopolis-pousada-imare-salinas-pousada-imare-salinas)
-- [Gastronomia paraense](https://imaresalinas.com/gastronomia-salinopolis-pousada-imare-salinas)
+## Contact and location
 
-## Contato e localização
-
-- Endereço: R. F, 770, Salinópolis - PA, 68721-000
+- Address: R. F, 770, Salinópolis - PA, 68721-000
 - WhatsApp: +55 27 99533-8163
 
 ## Sitemap
