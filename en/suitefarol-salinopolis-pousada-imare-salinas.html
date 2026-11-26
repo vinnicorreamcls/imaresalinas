@@ -308,12 +308,14 @@
         mainVideo.pause();
         mainVideo.classList.add('hidden');
         mainImage.classList.add('hidden');
+        mainYoutube.classList.remove('hidden');
         mainYoutube.hidden = false;
         const embedUrl = `https://www.youtube-nocookie.com/embed/${item.id}?rel=0&playsinline=1&mute=1`;
         if (mainYoutube.src !== embedUrl) mainYoutube.src = embedUrl;
       } else if (item.type === 'video') {
         if (youtubePlayerReady) youtubePlayer.pauseVideo();
         mainYoutube.src = 'about:blank';
+        mainYoutube.classList.add('hidden');
         mainYoutube.hidden = true;
         mainVideo.muted = true;
         mainVideo.volume = 0;
@@ -327,6 +329,7 @@
       } else {
         if (youtubePlayerReady) youtubePlayer.pauseVideo();
         mainYoutube.src = 'about:blank';
+        mainYoutube.classList.add('hidden');
         mainYoutube.hidden = true;
         mainVideo.pause();
         mainVideo.classList.add('hidden');
