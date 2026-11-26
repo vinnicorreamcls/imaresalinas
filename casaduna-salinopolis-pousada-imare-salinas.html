@@ -99,7 +99,7 @@
       <div class="grid gap-5 lg:grid-cols-[minmax(0,1fr)_190px]">
         <div class="gallery-main relative overflow-hidden rounded-3xl bg-slate-200 shadow-xl">
           <img id="mainImage" src="assets/img/casaduna/01-quarto-casaduna-salinopolis-pousada-imare-salinas.webp" alt="01 Quarto Casaduna" class="h-[460px] w-full object-cover md:h-[680px]" loading="eager">
-          <div id="mainYoutube" class="hidden h-[460px] w-full bg-black md:h-[680px]" aria-label="Vídeo da Casa Duna no YouTube"></div>
+          <iframe id="mainYoutube" src="about:blank" class="hidden h-[460px] w-full border-0 bg-black md:h-[680px]" title="Vídeo da Casa Duna no YouTube" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
           <div class="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 bg-gradient-to-t from-black/75 to-transparent p-5 pt-20 text-white">
             <p id="imageCaption" class="text-sm font-semibold md:text-base">01 Quarto Casaduna</p>
             <span id="imageCount" class="shrink-0 rounded-full bg-black/45 px-3 py-1 text-xs font-bold">1 / 26</span>
@@ -347,11 +347,13 @@
       count.textContent = `${current + 1} / ${images.length}`;
       if (isYoutube) {
         mainImage.classList.add('hidden');
-        mainYoutube.classList.remove('hidden');
-        showYoutube();
+        mainYoutube.hidden = false;
+        const embedUrl = 'https://www.youtube-nocookie.com/embed/ja6lcNX72L4?rel=0&playsinline=1&mute=1';
+        if (mainYoutube.src !== embedUrl) mainYoutube.src = embedUrl;
       } else {
         if (youtubePlayerReady) youtubePlayer.pauseVideo();
-        mainYoutube.classList.add('hidden');
+        mainYoutube.src = 'about:blank';
+        mainYoutube.hidden = true;
         mainImage.classList.remove('hidden');
         mainImage.src = images[current];
         mainImage.alt = labels[current];

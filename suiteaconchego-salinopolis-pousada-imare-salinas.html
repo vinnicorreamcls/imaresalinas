@@ -40,6 +40,8 @@
     .gallery-main img { transition:opacity .25s ease; }
     .gallery-main #prevBtn, .gallery-main #nextBtn { z-index: 20; }
     .gallery-main #mainImage, .gallery-main #mainYoutube { pointer-events: none; }
+    .gallery-main #mainVideo, .gallery-main #mainYoutube { position:absolute; inset:0; width:100%; height:100%; }
+    .gallery-main .hidden { display:none !important; }
     @media (max-width:767px) { .thumb-rail { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); max-height:none; } .thumb-rail button { height:76px; } }
   
     html{scroll-behavior:smooth;scroll-padding-top:92px} body{font-family:'DM Sans',sans-serif}.navlink{transition:color .2s}.navlink:hover{color:#F2A900}[x-cloak]{display:none!important}
@@ -95,7 +97,7 @@
         <div class="gallery-main relative overflow-hidden rounded-3xl bg-slate-200 shadow-xl">
           <img id="mainImage" src="assets/img/suiteaconchego/aconchego-01-salinopolis-pousada-imare-salinas.webp" alt="Suíte Aconchego — foto 1" class="h-[460px] w-full object-cover md:h-[680px]" loading="eager">
           <video id="mainVideo" poster="assets/img/suiteaconchego/aconchego-01-salinopolis-pousada-imare-salinas.webp" class="hidden h-[460px] w-full bg-black object-contain md:h-[680px]" controls muted playsinline preload="metadata" aria-label="Vídeo da Suíte Aconchego"></video>
-          <div id="mainYoutube" class="hidden h-[460px] w-full bg-black md:h-[680px]" aria-label="Vídeo da Suíte Aconchego no YouTube"></div>
+          <iframe id="mainYoutube" src="about:blank" class="hidden h-[460px] w-full border-0 bg-black md:h-[680px]" title="Vídeo da Suíte Aconchego" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
           <div class="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 bg-gradient-to-t from-black/75 to-transparent p-5 pt-20 text-white">
             <p id="imageCaption" class="text-sm font-semibold md:text-base">Suíte Aconchego — foto 1</p>
             <span id="imageCount" class="shrink-0 rounded-full bg-black/45 px-3 py-1 text-xs font-bold">1 / 16</span>
@@ -309,11 +311,13 @@
         mainVideo.pause();
         mainVideo.classList.add('hidden');
         mainImage.classList.add('hidden');
-        mainYoutube.classList.remove('hidden');
-        showYoutube(item);
+        mainYoutube.hidden = false;
+        const embedUrl = `https://www.youtube-nocookie.com/embed/${item.id}?rel=0&playsinline=1&mute=1`;
+        if (mainYoutube.src !== embedUrl) mainYoutube.src = embedUrl;
       } else if (item.type === 'video') {
         if (youtubePlayerReady) youtubePlayer.pauseVideo();
-        mainYoutube.classList.add('hidden');
+        mainYoutube.src = 'about:blank';
+        mainYoutube.hidden = true;
         mainVideo.muted = true;
         mainVideo.volume = 0;
         mainImage.classList.add('hidden');
@@ -325,7 +329,8 @@
         mainVideo.setAttribute('aria-label', item.label);
       } else {
         if (youtubePlayerReady) youtubePlayer.pauseVideo();
-        mainYoutube.classList.add('hidden');
+        mainYoutube.src = 'about:blank';
+        mainYoutube.hidden = true;
         mainVideo.pause();
         mainVideo.classList.add('hidden');
         mainImage.classList.remove('hidden');
