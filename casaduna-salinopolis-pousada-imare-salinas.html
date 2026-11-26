@@ -40,6 +40,9 @@
     .gallery-main { height:460px; }
     .gallery-main img, .gallery-main #mainYoutube, .gallery-main iframe { position:absolute; inset:0; width:100%; height:100%; }
     .gallery-main img { object-fit:cover; transition:opacity .25s ease; }
+    .gallery-main #prevBtn, .gallery-main #nextBtn { z-index: 20; }
+    .gallery-main #mainImage, .gallery-main #mainYoutube { pointer-events: none; }
+    .gallery-main .hidden { display: none !important; pointer-events: none !important; }
     .gallery-main iframe { border:0; }
     @media (min-width:768px) { .gallery-main { height:680px; } }
     @media (max-width:767px) { .thumb-rail { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); max-height:none; } .thumb-rail button { height:76px; } }

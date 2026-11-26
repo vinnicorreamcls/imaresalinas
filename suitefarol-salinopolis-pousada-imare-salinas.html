@@ -38,6 +38,8 @@
     .thumb { opacity:.62; transition:opacity .2s, transform .2s, box-shadow .2s; }
     .thumb:hover, .thumb.active { opacity:1; transform:scale(1.02); box-shadow:0 0 0 3px var(--sun); }
     .gallery-main img { transition:opacity .25s ease; }
+    .gallery-main #prevBtn, .gallery-main #nextBtn { z-index: 20; }
+    .gallery-main #mainImage, .gallery-main #mainYoutube { pointer-events: none; }
     @media (max-width:767px) { .thumb-rail { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); max-height:none; } .thumb-rail button { height:76px; } }
   
     html{scroll-behavior:smooth;scroll-padding-top:92px} body{font-family:'DM Sans',sans-serif}.navlink{transition:color .2s}.navlink:hover{color:#F2A900}[x-cloak]{display:none!important}
