@@ -347,12 +347,14 @@
       count.textContent = `${current + 1} / ${images.length}`;
       if (isYoutube) {
         mainImage.classList.add('hidden');
+        mainYoutube.classList.remove('hidden');
         mainYoutube.hidden = false;
         const embedUrl = 'https://www.youtube-nocookie.com/embed/ja6lcNX72L4?rel=0&playsinline=1&mute=1';
         if (mainYoutube.src !== embedUrl) mainYoutube.src = embedUrl;
       } else {
         if (youtubePlayerReady) youtubePlayer.pauseVideo();
         mainYoutube.src = 'about:blank';
+        mainYoutube.classList.add('hidden');
         mainYoutube.hidden = true;
         mainImage.classList.remove('hidden');
         mainImage.src = images[current];
